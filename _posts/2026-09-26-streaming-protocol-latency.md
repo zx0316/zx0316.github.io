@@ -1,6 +1,6 @@
 ---
 title: "开篇：RTMP、HLS 与 WebRTC，直播延迟差距到底在哪？"
-date: 2026-09-26 20:00:00 +0800
+date: 2026-09-26 00:30:00 +0800
 categories: [流媒体]
 tags: [WebRTC, RTMP, HLS, 低延迟直播, 协议对比]
 ---
