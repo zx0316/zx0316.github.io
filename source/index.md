@@ -23,7 +23,7 @@
 ```{toctree}
 :maxdepth: 2
 :caption: 目录
-:numbered:
+:numbered: 1
 
 1.latency/index
 2.transport/index
