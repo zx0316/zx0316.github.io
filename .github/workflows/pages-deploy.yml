@@ -46,7 +46,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build site
-        run: sphinx-build -b html source build/html
+        run: |
+          sphinx-build -b html source build/html
+          # 禁止 Pages 再做一次 Jekyll 处理，否则 _static / _sources 等下划线目录会被丢掉
+          touch build/html/.nojekyll
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
