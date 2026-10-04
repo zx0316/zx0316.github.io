@@ -1,7 +1,9 @@
 # 流媒体技术笔记
 
-基于 **Sphinx + sphinx_rtd_theme** 的流媒体 / WebRTC 学习笔记站，
+基于 **Sphinx + Furo** 的流媒体 / WebRTC 学习笔记站，
 在线地址：<https://zx0316.github.io>
+
+外观：明亮优雅的 Furo 主题，青碧色点缀，自带明暗切换（右上角图标）。
 
 ## 本地预览
 
@@ -57,7 +59,7 @@ rtp-rtcp
 ├── requirements.txt         # 构建依赖
 ├── extra/                   # 旧博客 URL 的跳转页（原样拷贝）
 └── source/
-    ├── conf.py              # 主题、扩展、目录深度等配置
+    ├── conf.py              # 主题（Furo）、扩展、中文字体与配色变量
     ├── index.md             # 首页 + 总目录
     ├── _static/custom.css   # 中文排版微调
     ├── 1.latency/           # 延迟篇

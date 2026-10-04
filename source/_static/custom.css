@@ -1,44 +1,43 @@
-/* 站点微调：保持 Read the Docs 原生观感，只处理中文排版与宽度 */
+/* 站点微调：Furo 原生观感 + 中文排版细节 */
 
-/* 正文区稍宽一点，避免中文表格频繁换行 */
-.wy-nav-content {
-    max-width: 1000px;
+/* 中文段落行距略放宽 */
+.bd-content {
+    line-height: 1.75;
 }
 
-/* 中文字体：优先系统字体，避免 RTD 默认字体渲染中文发虚 */
-body,
-.wy-nav-side,
-.rst-content {
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
-                 "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC",
-                 "Noto Sans CJK SC", Lato, "Helvetica Neue", Arial, sans-serif;
+/* 标题：中文加粗更清晰 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
-/* 代码块用等宽字体，中文注释也要能看清 */
-.rst-content pre code,
-.rst-content tt,
-.rst-content .codeblock {
-    font-family: "SFMono-Regular", Menlo, Consolas, "PingFang SC",
-                 "Microsoft YaHei", monospace;
-}
-
-/* 表格：表头加粗，单元格垂直居中 */
-.rst-content table.docutils th {
+/* 表格：表头左对齐、单元格垂直居中 */
+table.docutils th {
     text-align: left;
-    white-space: nowrap;
-}
-
-.rst-content table.docutils td {
     vertical-align: middle;
 }
 
-/* 侧边栏目录：中文标题行距放宽 */
-.wy-menu-vertical li > a,
-.wy-menu-vertical header {
+table.docutils td {
+    vertical-align: middle;
+}
+
+/* 代码块：caption 行距 */
+.code-block-caption,
+.caption {
     line-height: 1.5;
 }
 
-/* 首页大标题 */
-.rst-content h1 {
-    font-weight: 600;
+/* 提示框（admonition）内中文行距 */
+.admonition {
+    line-height: 1.7;
+}
+
+/* 侧栏目录：中文条目行距 */
+.sidebar-tree .reference {
+    line-height: 1.6;
+}
+
+/* 底部上一页/下一页区域允许自然换行 */
+.prev-next-area .prev-next-title {
+    white-space: normal;
 }

@@ -44,21 +44,43 @@ todo_include_todos = True
 
 # -- HTML 输出 --------------------------------------------------------------
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 html_static_path = ['_static']
 html_show_sourcelink = False
 html_title = '流媒体技术笔记'
 html_short_title = '流媒体笔记'
 
+_ZH_FONT = (
+    '-apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", '
+    '"Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", '
+    '"Segoe UI", Helvetica, Arial, sans-serif'
+)
+_ZH_MONO = (
+    '"SFMono-Regular", Menlo, Consolas, "PingFang SC", '
+    '"Microsoft YaHei", "Noto Sans Mono CJK SC", monospace'
+)
+
 html_theme_options = {
-    'navigation_depth': 3,
-    'collapse_navigation': False,
-    'sticky_navigation': True,
-    'includehidden': True,
-    'titles_only': False,
-    'logo_only': False,
-    'prev_next_buttons_location': 'both',
-    'style_external_links': True,
+    # 站点名显示在侧栏顶部
+    'sidebar_hide_name': False,
+    # 明亮模式：暖白纸面 + 青碧色点缀
+    'light_css_variables': {
+        'font-stack': _ZH_FONT,
+        'font-stack--headings': _ZH_FONT,
+        'font-stack--monospace': _ZH_MONO,
+        'color-brand-primary': '#0d9488',   # teal-600
+        'color-brand-content': '#0f766e',   # teal-700
+        'color-brand-visited': '#115e59',   # teal-800
+    },
+    # 暗色模式：跟随同一色系
+    'dark_css_variables': {
+        'font-stack': _ZH_FONT,
+        'font-stack--headings': _ZH_FONT,
+        'font-stack--monospace': _ZH_MONO,
+        'color-brand-primary': '#2dd4bf',   # teal-400
+        'color-brand-content': '#5eead4',   # teal-300
+        'color-brand-visited': '#99f6e4',   # teal-200
+    },
 }
 
 # -- 代码复制按钮 ------------------------------------------------------------
